@@ -247,7 +247,7 @@ const  unsigned char *unicodeToUTF8 (unsigned char *Str, int Size)
 //	printf("UNICODETOUTF8 : %d\n", Size);
 	// TODO - rewrite as short..
 	int32_t j = 0;
-	for (i = adj; i < count *2 ; i++)
+	for (i = adj; i < count; i++)
 	{
 	
 		if (Str[i] == '\0')
