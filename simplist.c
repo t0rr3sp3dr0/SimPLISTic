@@ -766,7 +766,7 @@ enum {
 			*NextObject = Off + ObjectSize; 
 			if(g_debug)printf("INT @0x%x IS %d bytes (0x%x) - NEXT IS %x\n", Off,ObjectSize, Data[Off], *NextObject);
 			
-			returned = (char *) malloc(16);
+			returned = (char *) malloc(21);
 			sprintf(returned,"%llu", val);
 			return (returned);
 
