@@ -1,0 +1,141 @@
+00000000  62 70 6c 69 73 74 31 36  d0 06 03 00 00 00 00 00  |bplist16........|
+             int4----------|...........................
+00000010  00 74 69 6e 76 00 d0 06  03 00 00 00 00 00 00 77  |.tinv..........w|
+           int7-- $class---| int14  NSInvocation
+00000020  24 63 6c 61 73 73 00 7d  4e 53 49 6e 76 6f 63 61  |$class.}NSInvoca|
+           -----------|  int3 ty----| int9 v@:q@@@?
+00000030  74 69 6f 6e 00 73 74 79  00 79 76 40 3a 71 40 40  |tion.sty.yv@:q@@|
+          ------|  int3 se --| int 41 
+00000040  40 3f 00 73 73 65 00 7f  11 29 65 76 61 6c 75 61  |@?.sse...)evalua|
+00000050  74 65 50 6f 6c 69 63 79  3a 6f 70 74 69 6f 6e 73  |tePolicy:options|
+00000060  3a 75 69 44 65 6c 65 67  61 74 65 3a 72 65 70 6c  |:uiDelegate:repl|
+          ------|           
+00000070  79 3a 00 e0 11 01 e0 d0  02 03 00 00 00 00 00 00  |y:..............|
+           int7 $class          |  int14 NSDictionary
+00000080  77 24 63 6c 61 73 73 00  7d 4e 53 44 69 63 74 69  |w$class.}NSDicti|
+                          | int8 NS.keys              |
+00000090  6f 6e 61 72 79 00 78 4e  53 2e 6b 65 79 73 00 a0  |onary.xNS.keys..|
+                                         |int12 NS.objects
+000000a0  a9 00 00 00 00 00 00 00  11 02 7b 4e 53 2e 6f 62  |..........{NS.ob|
+                          |                              |
+000000b0  6a 65 63 74 73 00 a0 02  03 00 00 00 00 00 00 6f  |jects..........o|
+           string 288 ......
+000000c0  12 20 01 41 00 75 00 74  00 68 00 65 00 6e 00 74  |. .A.u.t.h.e.n.t|
+000000d0  00 69 00 63 00 61 00 74  00 65 00 20 00 75 00 73  |.i.c.a.t.e. .u.s|
+000000e0  00 69 00 6e 00 67 00 20  00 79 00 6f 00 75 00 72  |.i.n.g. .y.o.u.r|
+000000f0  00 20 00 66 00 69 00 6e  00 67 00 65 00 72 00 0a  |. .f.i.n.g.e.r..|
+00000100  00 0a 00 52 00 65 00 6d  00 69 00 6e 00 64 00 65  |...R.e.m.i.n.d.e|
+00000110  00 72 00 3a 00 20 00 41  00 6e 00 79 00 20 00 75  |.r.:. .A.n.y. .u|
+00000120  00 73 00 65 00 72 00 20  00 77 00 69 00 74 00 68  |.s.e.r. .w.i.t.h|
+000002e0  00 69 00 6e 00 20 00 74  00 68 00 65 00 20 00 6d  |.i.n. .t.h.e. .m|
+000002f0  00 61 00 69 00 6e 00 20  00 6d 00 65 00 6e 00 75  |.a.i.n. .m.e.n.u|
+  ....
+00000300  00 2e 00 e0 e0 e0 e0                              |.......|
+
+
+(lldb) 
+
+
+<NSInvocation: 0x100271220>
+return value: {v} void
+target: {@} 0x0
+selector: {:} evaluatePolicy:options:uiDelegate:reply:
+argument 2: {q} 1
+argument 3: {@} 0x100271df0 -- string
+argument 4: {@} 0x0
+argument 5: {@?} 0x0 (block)
+
+
+(lldb) mem read 0x100271df0
+0x100271df0: b1 70 75 ab a1 21 00 00 90 be 26 00 01 00 00 00  .pu..!....&.....
+0x100271e00: 23 00 00 00 00 00 00 b0 00 00 00 00 00 00 00 00  #...............
+
+(lldb) po 0x010026be90
+Authenticate using your finger
+
+Reminder: Any user with a registered fingerprint on this device (for example children or a spouse) has full access to your E*TRADE account(s), including the ability to trade and move money. You can disable Touch ID at any time in Settings in the main menu.
+
+
+oo-----------
+---------
+(lldb) mem read 0x1002706e0
+0x1002706e0: 62 70 6c 69 73 74 31 36 d0 a9 00 00 00 00 00 00  bplist16........
+0x1002706f0: 00 74 69 6e 76 00 d0 a9 00 00 00 00 00 00 00 77  .tinv..........w
+0x100270700: 24 63 6c 61 73 73 00 7d 4e 53 49 6e 76 6f 63 61  $class.}NSInvoca
+0x100270710: 74 69 6f 6e 00 73 74 79 00 78 76 40 3a 40 40 40  tion.sty.xv@:@@@
+0x100270720: 3f 00 73 73 65 00 7f 11 29 63 6f 6e 6e 65 63 74  ?.sse...)connect
+0x100270730: 54 6f 45 78 69 73 74 69 6e 67 43 6f 6e 74 65 78  ToExistingContex
+0x100270740: 74 3a 63 61 6c 6c 62 61 63 6b 3a 72 65 70 6c 79  t:callback:reply
+0x100270750: 3a 00 e0 e0 e0 d0 a7 00 00 00 00 00 00 00 77 24  :.............w$
+0x100270760: 63 6c 61 73 73 00 7f 11 14 5f 4e 53 58 50 43 44  class...._NSXPCD
+0x100270770: 69 73 74 61 6e 74 4f 62 6a 65 63 74 00 73 70 6e  istantObject.spn
+0x100270780: 00 11 02 73 65 78 00 b0 e0 e0 00 00 00 00 00 00  ...sex..........
+0x100270790: 21 73 76 ab a1 01 00 00 60 01 26 00 01 00 00 00  !sv.....`.&.....
+---------
+
+<NSInvocation: 0x10023cb30>
+return value: {v} void
+target: {@} 0x0
+selector: {:} connectToExistingContext:callback:reply:
+argument 2: {@} 0x0
+argument 3: {@} 0x1002414f0  <_NSXPCDistantObject: 0x1002414f0>
+argument 4: {@?} 0x0 (block)
+
+
+
+
+frame #0: 0x0000000187ba2b38 Foundation`-[NSXPCConnection _decodeAndInvokeMessageWithData:] 
+
+
+---------
+
+oo--------------
+<NSMethodSignature: 0x100224710>
+    number of arguments = 6
+    frame size = 224
+    is special struct return? NO
+    return value: -------- -------- -------- --------
+        type encoding (v) 'v'
+        flags {}
+        modifiers {}
+        frame {offset = 0, offset adjust = 0, size = 0, size adjust = 0}
+        memory {offset = 0, size = 0}
+    argument 0: -------- -------- -------- --------
+        type encoding (@) '@'
+        flags {isObject}
+        modifiers {}
+        frame {offset = 0, offset adjust = 0, size = 8, size adjust = 0}
+        memory {offset = 0, size = 8}
+    argument 1: -------- -------- -------- --------
+        type encoding (:) ':'
+        flags {}
+        modifiers {}
+        frame {offset = 8, offset adjust = 0, size = 8, size adjust = 0}
+        memory {offset = 0, size = 8}
+    argument 2: -------- -------- -------- --------
+        type encoding (q) 'q'
+        flags {isSigned}
+        modifiers {}
+        frame {offset = 16, offset adjust = 0, size = 8, size adjust = 0}
+        memory {offset = 0, size = 8}
+    argument 3: -------- -------- -------- --------
+        type encoding (@) '@'
+        flags {isObject}
+        modifiers {}
+        frame {offset = 24, offset adjust = 0, size = 8, size adjust = 0}
+        memory {offset = 0, size = 8}
+    argument 4: -------- -------- -------- --------
+        type encoding (@) '@'
+        flags {isObject}
+        modifiers {}
+        frame {offset = 32, offset adjust = 0, size = 8, size adjust = 0}
+        memory {offset = 0, size = 8}
+    argument 5: -------- -------- -------- --------
+        type encoding (@) '@?'
+        flags {isObject, isBlock}
+        modifiers {}
+        frame {offset = 40, offset adjust = 0, size = 8, size adjust = 0}
+        memory {offset = 0, size = 8}
+
+
+
